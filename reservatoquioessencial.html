@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva de Viagem - 450 Milhas</title>
     <style>
-        /* Estilos básicos */
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -14,7 +14,7 @@
             color: #333;
         }
         
-        /* Cabeçalho */
+        
         header {
             background-color: #1E3A8A;
             color: white;
@@ -40,7 +40,7 @@
             font-weight: bold;
         }
         
-        /* Conteúdo principal */
+        
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -140,7 +140,7 @@
             background-color: #e8640b;
         }
         
-        /* Rodapé */
+        
         footer {
             background-color: #1E3A8A;
             color: white;
@@ -319,41 +319,41 @@
     </div>
 
     <footer>
-        <h2>Vem conosco!</h2>
-        <p>Descubra o mundo com a 450 Milhas</p>
+        <h2></h2>
+        <p>Descubra o mundo com a 456 Milhas</p>
         <div class="contato">
-            <p>Telefone: (11) 4567-8901 | Email: contato@450milhas.com</p>
+            <p>Telefone: (41) 99898-0586 | Email: naoseiquela@456milhas.com</p>
         </div>
-        <p>&copy; 2025 450 Milhas. Todos os direitos reservados.</p>
+        <p>&copy; 2025 456 Milhas. Todos os direitos reservados.</p>
     </footer>
 
     <script>
-        // Mostrar/ocultar detalhes do pagamento
+        
         document.querySelectorAll('input[name="pagamento"]').forEach(radio => {
             radio.addEventListener('change', function() {
-                // Ocultar todos os detalhes
+                
                 document.querySelectorAll('.detalhes-pagamento').forEach(detalhe => {
                     detalhe.style.display = 'none';
                 });
                 
-                // Mostrar detalhes do método selecionado
+               
                 const detalhesId = 'detalhes-' + this.value;
                 document.getElementById(detalhesId).style.display = 'block';
             });
         });
         
-        // Validação do formulário
+        
         document.getElementById('form-reserva').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Verificar se um método de pagamento foi selecionado
+            
             const metodoPagamento = document.querySelector('input[name="pagamento"]:checked');
             if (!metodoPagamento) {
                 alert('Por favor, selecione um método de pagamento.');
                 return;
             }
             
-            // Verificar se os dados do cartão foram preenchidos (se selecionado)
+            
             if (metodoPagamento.value === 'cartao') {
                 const numCartao = document.getElementById('num-cartao').value;
                 const nomeCartao = document.getElementById('nome-cartao').value;
@@ -366,9 +366,9 @@
                 }
             }
             
-            // Se tudo estiver correto, mostrar mensagem de sucesso
+            
             alert('Reserva confirmada com sucesso! Em breve você receberá um e-mail com os detalhes.');
-            // Aqui normalmente enviaríamos os dados para o servidor
+            
         });
     </script>
 </body>
